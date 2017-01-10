@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto|Yrsa');
+
+body {
+  background: #4ECDC4; 
+  background: -webkit-linear-gradient(to bottom, #4ECDC4 , #556270); 
+  background: linear-gradient(to bottom, #4ECDC4 , #556270);
+}
+body, div {
+  margin: 0;
+  padding: 0;
+}
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-end;
+  min-width: 300px;
+  max-width: 750px;
+  margin: 0 auto;
+}
+.container > * {
+  flex-basis: 100%;
+}
+.quote-container {
+  padding: 20px 10px;
+}
+.buttons-container {
+}
+.quote {
+  color: #fff;
+  font-size: 32px;
+  font-family: 'Yrsa', serif;
+}
+.quote__text {
+  margin-bottom: 20px;
+}
+.quote__author {
+  text-align: right;
+  font-family: 'Roboto', sans-serif;
+  font-size: 24px;
+}
+.buttons {
+  display: flex;
+}
+.btn {
+  flex: 1;
+  background: transparent;
+  border: 2px solid #ccc;
+  font-family: 'Roboto', sans-serif;
+  font-size: 22px;
+  letter-spacing: 1px;
+  color: #ccc;
+  margin: 10px;
+  padding: 6px;
+  cursor: pointer;
+}
+.btn:hover {
+  border: 2px solid #fff;
+  color: #fff;
+}
+.btn__next {
+}
+.loader-container {
+  width: 18px;
+  display: inline-block;
+}
+.loader {
+  width: 100%;
+}
+.icon {
+  fill: #ccc;
+  width: 18px;
+}
+.btn:hover .icon__next {
+  fill: #fff;
+}
+.btn:hover .icon__twitter {
+  fill: #1da1f2;
+}
