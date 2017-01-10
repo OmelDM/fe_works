@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Ubuntu+Mono')
+
+$main-color: #fff
+
+body, div
+  margin: 0
+  padding: 0
+
+body
+  background: #000428
+  background: -webkit-linear-gradient(to bottom, #000428 , #004e92)
+  background: linear-gradient(to bottom, #000428 , #004e92)
+  color: $main-color
+  font-family: 'Open Sans', sans-serif
+  
+.container
+  display: flex
+  justify-content: center
+  align-items: flex-start
+  height: 100vh
+  padding-top: 10%
+  box-sizing: border-box
+ 
+.weather
+  display: flex
+  flex-direction: column
+  align-items: center
+  text-align: center
+  
+  &__error
+    color: #f00
+    font-family: 'Ubuntu Mono', monospace
+    font-size: 1rem
+    margin-bottom: 10px
+  
+  &__location
+    margin-bottom: 12px
+  
+  &__city
+    font-size: 3rem
+    letter-spacing: 3px
+  
+  &__coords
+    font-size: .7rem
+   
+  &__temp
+    font-size: 1.5rem
+    letter-spacing: 2px
+    margin-bottom: 5px
+  
+  &__properties
+    font-size: 1rem
+    letter-spacing: 1px
+    margin-bottom: 18px
+
+  &__scale
+    color: $main-color
+    font-size: inherit
+    font-family: inherit
+    letter-spacing: inherit
+    background: transparent
+    border: none
+    outline: none
+    padding: 0
+    cursor: pointer
+    text-decoration: underline
+    
+    &:hover
+      color: darken($main-color, 20)
+      text-decoration: none
+   
+.icon
+  width: 150px
+  height: 150px
+  fill:  $main-color
