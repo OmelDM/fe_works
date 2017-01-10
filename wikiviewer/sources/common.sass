@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto')
+
+body, div, h3, p
+  margin: 0
+  padding: 0
+  font-family: 'Roboto', sans-serif
+  
+.search-container
+  height: 100vh
+  background: #000 url(https://source.unsplash.com/tI_Odb7ZU6M/1280x1024) no-repeat center center
+  background-size: 100%
+  transition: height 1s
+  display: flex
+  // flex-direction: column
+  justify-content: center
+  align-items: center
+  // border: 1px solid red
+
+  &_reduced
+    height: 120px
+ 
+@media (max-width: 1280px)
+  .search-container
+    background-size: cover
+
+.search
+  width: 100%
+  max-width: 750px
+  margin: 10px 30px
+  // border: 1px solid red
+  
+  &__input
+    box-sizing: border-box
+    width: calc(100% - 90px)
+    padding: 8px 30px
+    padding-right: 60px
+    line-height: 32px
+    font-size: 32px
+    color: #333
+    border-radius: 30px
+    border: none
+    outline: none
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .3)
+    
+    &:focus,  &:hover
+      box-shadow: 0 8px 13px rgba(0, 0, 0, .5), -6px 0 11px rgba(0, 0, 0, .5), 6px 0 11px rgba(0, 0, 0, .5)
+  
+  &__button
+    margin-left: -60px
+    background: transparent
+    border: none
+    outline: none
+    cursor: pointer
+    
+    &:disabled .search__icon, &:disabled:hover .search__icon
+      fill: #ccc
+
+    &:hover .search__icon
+      fill: #000
+   
+  &__random
+    // border: 1px solid green
+    margin-left: -90px
+    padding: 0 8px
+    
+  &__icon
+    fill: #333
+    width: 30px
+    height: 30px
+    
+    &_random
+      fill: #b50900
+      opacity: .7
+      
+      &:hover
+        fill: #b50900
+        opacity: 1
+    
+.results-container
+  max-width: 700px
+  min-width: 300px
+  margin: auto
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  height: 0
+  overflow: hidden
+  // border: 1px solid red
+  
+  &_expanded
+    height: 100%
+    
+.result
+  padding: 10px 0
+  width: 100%
+  
+.link
+  color: #3b5998
+
+  &:hover
+    color: #b50900
+    text-decoration: none
+  
+.error
+  font-size: 32px
+  color: red
